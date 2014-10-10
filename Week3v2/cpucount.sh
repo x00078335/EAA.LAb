@@ -12,8 +12,7 @@
 
 
 
+cpucount=$(grep processor /proc/cpuinfo | wc -l)
 
+printf "The number of cores is %s\n" $cpucount
 
-
-
-grep processor /proc/cpuinfo | wc -l
