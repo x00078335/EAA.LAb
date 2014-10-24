@@ -11,6 +11,4 @@
 echo "How do you feel?"
 read input_variable1
 
-echo input_variable1 >> diary.txt
-
-date >> diary.txt 
+echo $(date) $input_variable1 >> diary.txt   
