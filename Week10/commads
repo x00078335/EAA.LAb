@@ -1,0 +1,40 @@
+mint@mint-VirtualBox ~ $ cd EAA.LAb
+mint@mint-VirtualBox ~/EAA.LAb $ git add-A
+git: 'add-A' is not a git command. See 'git --help'.
+mint@mint-VirtualBox ~/EAA.LAb $ git add -A
+mint@mint-VirtualBox ~/EAA.LAb $ git commit -a
+[master 2cab3b9] Ruby work DSL
+ 7 files changed, 51 insertions(+)
+ create mode 100644 Week10/add.EAA.rb
+ create mode 100644 Week10/add.apache2.rb
+ create mode 100644 Week10/add.syssdat.rb
+ create mode 100644 Week10/add.tdi.file.rb
+ create mode 100644 Week10/add.tdi.rb
+ create mode 100644 Week10/addEAA.tdi.rb
+ create mode 100644 Week10/config.EAA.file.rb
+mint@mint-VirtualBox ~/EAA.LAb $ git push origin master
+fatal: unable to access 'https://github.com/x00078335/EAA.LAb.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+mint@mint-VirtualBox ~/EAA.LAb $ git push -u origin master
+fatal: unable to access 'https://github.com/x00078335/EAA.LAb.git/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+mint@mint-VirtualBox ~/EAA.LAb $ export GIT_SSL_NO_VERIFY=1
+mint@mint-VirtualBox ~/EAA.LAb $ export http_proxy=http://localhost:3128
+mint@mint-VirtualBox ~/EAA.LAb $ git add -A
+mint@mint-VirtualBox ~/EAA.LAb $ git commit -a
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+mint@mint-VirtualBox ~/EAA.LAb $ git push -u origin master
+Username for 'https://github.com': x00078335
+Password for 'https://x00078335@github.com': 
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.10 KiB | 0 bytes/s, done.
+Total 10 (delta 2), reused 0 (delta 0)
+To https://github.com/x00078335/EAA.LAb.git
+   909868a..2cab3b9  master -> master
+Branch master set up to track remote branch master from origin.
+mint@mint-VirtualBox ~/EAA.LAb $ 
+
